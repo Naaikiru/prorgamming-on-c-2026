@@ -8,7 +8,6 @@ int main(void)
 	double m[3][3];
 	int x;
 	int y;
-
     for(x =0; x < 3; x++)
     {
         for(y =0; y<3; y++)
