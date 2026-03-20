@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
-int main(void) 
+int main() 
 {
-    
+	char str[80];
+    scanf("%s \n", &str);
+	printf("%s \n", str);
     return 0;
 }
