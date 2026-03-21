@@ -15,31 +15,37 @@ int main(void)
         {
             printf("matrices with the 'double' type(3x3): \n");
 
-            double m[3][3];
+            double m[size][size];
             int x;
             int y;
-            for(x =0; x < 3; x++)
+            double sum1, sum2;
+            for(x =0; x < size; x++)
             {
-                for(y =0; y < 3; y++)
+                for(y =0; y < size; y++)
                 {
                     scanf("%lf", &m[x][y]);
                 }
             }
-
-            printf("the sum of the values of the main diagonal = %lf \n", m[0][0]+m[1][1]+m[2][2]);
-            printf("the sum of the values of the side diagonal = %lf \n", m[0][2]+m[1][1]+m[2][0]);
+            for (int s = 0; s < size; s++)
+            {
+                sum1 += m[s][s];
+                sum2 += m[s][2-s];
+            }
+                           
+            printf("the sum of the values of the main diagonal = %lf \n", sum1);
+            printf("the sum of the values of the side diagonal = %lf \n", sum2);
         }
         
-        else if (size == 2)
+        /*else if (size == 2)
         {
             printf("matrices with the 'int' type(2x2): \n");
 
-            int mm[2][2];
+            int mm[size][size];
             int xx;
             int yy;
-            for(xx =0; xx < 2; xx++)
+            for(xx =0; xx < size; xx++)
             {
-                for(yy =0; yy < 2; yy++)
+                for(yy =0; yy < size; yy++)
                 {
                     scanf("%d", &mm[xx][yy]);
                 }
@@ -55,7 +61,7 @@ int main(void)
         else
         {
             printf("You have entered the wrong value, please try again! \n");
-        }
+        }*/
 
         int z;
         printf(" \n");

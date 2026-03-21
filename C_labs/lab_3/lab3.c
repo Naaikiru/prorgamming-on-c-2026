@@ -15,6 +15,10 @@ int main()
 		{
 			str[c] = 'B';
 		}
+		else if (str[c] == '!')
+		{
+			str[c] = '?';
+		}
 	}
 	printf("%s", str);
     return 0;
